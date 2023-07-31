@@ -107,10 +107,43 @@ meter::-webkit-meter-optimum-value {
   box-shadow: 0 5px 5px -5px #999 inset;
   background-image: linear-gradient(90deg, hsl(6, 100%, 80%)20%, hsl(335, 100%, 65%)50%);
   background-size: 100% 100%;
-  border-radius: 50px;
+  border-radius: 100px;
 
 }
+.message{
+  height:80px;
+  background-color:white;
+  width:200px;
+  color:hsl(229, 57%, 11%);
+  border-radius: 10px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+ font-size: 2rem;
+ font-weight: 800;
+ margin-left: auto;
+ position: relative;
+ top:-100px;
+}
+.message:after {
+  content: '';
+  position:relative;
+  bottom:-60%;
+  left: 10%;
+  width: 0;
+  height: 0;
+  color:white;
+  border: 50px solid transparent;
+  border-top-color: white;;
+  border-bottom: 0;
+  border-right: 50px;
 
+}
+.message-span{
+  font-size: 1rem;
+  font-weight: 100;
+}
 @media screen and (max-width: 600px) {
   
 main {
@@ -145,8 +178,9 @@ main {
     background-color: hsl(228, 56%, 26%);
     display:block;
     padding:5%;
-    height:10rem;
+    height:15rem;
     font-size: 14px;
+    width:auto;
   
   }
   meter::-webkit-meter-bar {
@@ -165,5 +199,16 @@ main {
     position: relative;
     top:-13px;
     left:336px;
+  }
+
+
+
+  .message{
+    position: relative;
+ top:200px;
+ left:-60px;
+  }
+  .message:after {
+display: none;
   }
 }
